@@ -30,8 +30,8 @@ const LoveCalculator = () => {
   };
 
   const calculateLovePercent = (name1, name2) => {
-    const yourName = name1.toLowerCase().split("");
-    const theirName = name2.toLowerCase().split("");
+    const yourName = name1.toLowerCase().replace(/\s/g, "").split("");
+    const theirName = name2.toLowerCase().replace(/\s/g, "").split("");
     const loves = ["l", "o", "v", "e", "s"];
     const arr = [...yourName, ...theirName, ...loves];
 
